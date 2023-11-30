@@ -1,0 +1,34 @@
+public class burbuja {
+public static void burbuja2(int[] num) {
+		
+		int temp;
+		
+	    for (int i = 0; i < num.length; i++) {
+
+	        for (int j = 0; j < num.length - 1; j++) {
+	            if (num[j] > num[j+1]) {
+	            	temp = num[ j ];
+                    num[ j ] = num[ j+1 ];
+                    num[ j+1 ] = temp;
+	            }
+	        }
+	    }
+	}
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);		
+		
+	    final int TAM = 6;
+
+	    int[] tabla = {5,3,7,6,2,1};
+  
+	    
+	    burbuja2(tabla); 
+	 
+	    
+	    for (int i=0; i<TAM; i++) {
+	    	System.out.print("\n"+tabla[i]);
+	    }
+
+	 
+	}
+}
